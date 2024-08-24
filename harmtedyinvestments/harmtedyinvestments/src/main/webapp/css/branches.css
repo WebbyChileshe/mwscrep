@@ -1,0 +1,234 @@
+@charset "UTF-8";
+:root {
+  --body-bg: #033a80;
+  --text-color: #000000;
+  --secondary-text-color: rgba(0, 0, 0, 0.6);
+  --primary-color: #2f89fc;
+  --secondary-color: hsl(214, 97%, 52%);
+  --sub-secondary-color: #61a6fd;
+  --text-font: 0.9rem;
+  --main-color: #d01a93;
+  --white-color: #fff;
+  --testing-color: #630644;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar,
+.cards_holder {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.navbar_holder {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  padding: 0 10px !important;
+  margin: 0 !important;
+}
+
+.navbar .branding {
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+}
+
+.navbar .branding .company_name {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar .branding .username {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .branding .username i {
+  display: inline-block;
+  font-size: 0.6rem;
+  border: 1px solid var(--main-color);
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  align-self: center;
+  text-align: center;
+  line-height: 13px;
+  margin-right: 5px;
+}
+
+.cards_holder .card-body {
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+
+
+.branch_name {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+
+.cards_holder .card-body i {
+  font-size: 2.5rem;
+  margin: 10px;
+  color: #d01a93;
+  margin-bottom:15px;
+}
+
+.navbar .log_in_log_out_btns button {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.navbar .log_in_log_out_btns .visit_site {
+  background: var(--main-color);
+}
+
+.navbar .log_in_log_out_btns button {
+  font-size: 1rem;
+}
+
+.navbar .branding .company_name {
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar .log_in_log_out_btns button {
+    font-size: 0.95rem;
+  }
+
+  .navbar .branding .company_name {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navbar .log_in_log_out_btns button {
+    font-size: 0.9rem;
+  }
+
+  .navbar .branding .company_name {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .log_in_log_out_btns button {
+    font-size: 0.8rem;
+  }
+
+  .navbar .branding .company_name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar .log_in_log_out_btns button {
+    font-size: 0.65rem;
+  }
+
+  .navbar .branding .company_name {
+    font-size: 0.8rem;
+  }
+}
+
+/* card */
+
+.content_holder {
+  max-width: 1300px;
+  min-width: 330px;
+  margin: 0 auto;
+}
+
+/* Remove shadow property on cards and navbar */
+.card,
+.nav_bar {
+  box-shadow: none !important;
+}
+
+.external_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.content_holder .card {
+  border: 1px solid var(--main-color);
+  text-align: center;
+  transition: all 0.5s ease-in;
+}
+
+.content_holder .card a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.content_holder .card:hover {
+  background-color: var(--main-color);
+}
+.content_holder .card:hover .card-body i {
+  color: #fafafa !important;
+  transition: all 0.5s ease-in;
+}
+
+.content_holder .card:hover a {
+  color: #fafafa !important;
+}
+
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--body-bg);
+  padding: 10px;
+}
+
+.nav_bar .view_site_btn {
+  background: var(--main-color);
+}
+
+.content_holder .company_title {
+  align-self: center !important;
+  color: var(--white-color);
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .nav_bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .company_title {
+    text-align: left;
+    width: 100%;
+  }
+
+  .external_link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
